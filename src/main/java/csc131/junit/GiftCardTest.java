@@ -46,5 +46,19 @@ public class GiftCardTest {
 		card = new GiftCard(issuingStore, balance);
 		
 		assertEquals("deduct(90.00) ", "Remaining Balance:  10.00", card.deduct(90.00));
+		
+		assertEquals("deduct(90.00) ", "Amount Due:  10.00", card.deduct(20.00));
+		
+		assertEquals("deduct(90.00) ", "Invalid Transaction", card.deduct(-100.00));
+		
+		
+		/*
+		 * int issuingStore2 = 1338; double balance2 = 100.00; GiftCard card2 = new
+		 * GiftCard(issuingStore2, balance2);
+		 */
+		
+		
+		
+		
 	}
 }
